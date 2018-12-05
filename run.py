@@ -6,7 +6,7 @@ from functools import partial
 
 
 img = ['.png','.jpg','.svg','.jpeg','.exif','.tiff','.gif','.bmp','.jfif','.ppm','.pgm','.pbm','.pnm','.webp','.heif','.bat','.bpg']
-vid = ['.mp4','.mkv','.m4a', '.m4v', '.f4v', '.f4a', '.m4b', '.m4r', '.f4b', '.mov','.3gp', '.3gp2', '.3g2', '.3gpp',             '.3gpp2','.ogg','.oga','.ogv','.ogx','.wmv', '.wma', '.asf','.webm','.flv','.ts']
+vid = ['.mp4','.mkv','.m4a', '.m4v', '.f4v', '.f4a', '.m4b', '.m4r', '.f4b', '.mov','.3gp', '.3gp2', '.3g2', '.3gpp','.3gpp2','.ogg','.oga','.ogv','.ogx','.wmv', '.wma', '.asf','.webm','.flv','.ts']
 var = ""
 
 def is_vid(st):
