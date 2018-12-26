@@ -8,6 +8,7 @@ from functools import partial
 img = ['.png','.jpg','.svg','.jpeg','.exif','.tiff','.gif','.bmp','.jfif','.ppm','.pgm','.pbm','.pnm','.webp','.heif','.bat','.bpg']
 vid = ['.mp4','.mkv','.m4a', '.m4v', '.f4v', '.f4a', '.m4b', '.m4r', '.f4b', '.mov','.3gp', '.3gp2', '.3g2', '.3gpp','.3gpp2','.ogg','.oga','.ogv','.ogx','.wmv', '.wma', '.asf','.webm','.flv','.ts']
 var = ""
+flagoff = 0
 
 def is_vid(st):
     for i in vid:
@@ -31,13 +32,34 @@ def mkname(name):
     return woo
 
 def okay(e):
-    global var
+    global var, flagoff
     string = e.get()
     var = str(string).rstrip()
+    foo()
+    assert os.path.isdir(var), "Not a directory"
+    path1 = mkname(var+"/videos")
+    path2 = mkname(var+"/images")
+    os.mkdir(path1)
+    os.mkdir(path2)
+    for i in os.listdir(var):
+        if os.path.isfile(var +'/'+ str(i)):
+            if is_vid(i):
+                cutnpst(i,var,path1)
+            if is_img(i):
+                cutnpst(i,var,path2)
+    flagoff = 1
 
+def foo():
+    global b, b1
+    b.destroy()
+    b1.pack(side = 'bottom')
+    b1.place()
+
+def foo1():
+    global flagoff
+    if flagoff: sys.exit()
 
 if __name__ == "__main__":
-
 
     root = Tk()                              # the main object
     root.title('Filter App')                 # the title
@@ -66,20 +88,6 @@ if __name__ == "__main__":
     b.pack(side = 'bottom')                                                  # set and display
     b.place()
 
+    b1 = Button(root,text='DONE',command=foo1, width = 15, height = 2,fg = '#6a7ad1',
+    activeforeground = '#013e8e',font =helv36 ) # a button object
     root.mainloop()
-
-
-    assert os.path.isdir(var), "Not a directory"
-    path1 = mkname(var+"/videos")
-    path2 = mkname(var+"/images")
-    os.mkdir(path1)
-    os.mkdir(path2)
-    for i in os.listdir(var):
-        if os.path.isfile(var +'/'+ str(i)):
-            if is_vid(i):
-                cutnpst(i,var,path1)
-            if is_img(i):
-                cutnpst(i,var,path2)
-    Label(master = root,text = "Done",).pack()        # label object set and displayed
-
-    sys.exit()
