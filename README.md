@@ -1,5 +1,6 @@
 library(mvtnorm)
 
+<<<<<<< HEAD
 rowvars <- colvars <- c(10,20,30,40,50)
 
 all <- NULL
@@ -24,3 +25,7 @@ useOuterStrips(xyplot(y~x|colvar*rowvar, all, cov=all$covar,
                         print(cor(x,y))
                         ltext(14,-12, round(cov[subscripts][1],0))
                       }))
+=======
+    Use for cleaning the directory mess and make separate folders for pictures and videos.
+![text](https://img.shields.io/badge/Experiment-blue.svg)
+>>>>>>> d4f1b5586f1c508dfa21ca34a12d26a4ee6a1721
