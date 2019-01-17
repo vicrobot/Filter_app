@@ -3,6 +3,7 @@ import sys
 from tkinter import *
 from tkinter import font
 from functools import partial
+import shutil
 
 
 img = ['.png','.jpg','.svg','.jpeg','.exif','.tiff','.gif','.bmp','.jfif','.ppm','.pgm','.pbm','.pnm','.webp','.heif','.bat','.bpg']
@@ -31,12 +32,17 @@ def mkname(name):
         woo = woo + str(num)
     return woo
 
+class Not_A_Directory(BaseException): pass
+
 def okay(e):
     global var, flagoff
     string = e.get()
     var = str(string).rstrip()
+    if not os.path.isdir(var):
+        try: raise Not_A_Directory
+        except: print('Not A Directory')
+        return
     foo()
-    assert os.path.isdir(var), "Not a directory"
     path1 = mkname(var+"/videos")
     path2 = mkname(var+"/images")
     os.mkdir(path1)
