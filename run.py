@@ -4,6 +4,7 @@ from tkinter import *
 from tkinter import font
 from functools import partial
 import shutil
+from tkinter import messagebox as mb
 
 
 img = ['.png','.jpg','.svg','.jpeg','.exif','.tiff','.gif','.bmp','.jfif','.ppm','.pgm','.pbm','.pnm','.webp','.heif','.bat','.bpg']
@@ -40,7 +41,7 @@ def okay(e):
     var = str(string).rstrip()
     if not os.path.isdir(var):
         try: raise Not_A_Directory
-        except: print('Not A Directory')
+        except: mb.showinfo(title = 'Notice', message = 'Not A Directory   ')
         return
     foo()
     path1 = mkname(var+"/videos")
@@ -75,25 +76,25 @@ if __name__ == "__main__":
 
 
     #font
-    helv36 = font.Font(family="Helvetica",size=20,weight="bold")
-    helv37 = font.Font(family="Sans_monospace",size=30,weight="normal")
+    courier20 = font.Font(family="Courier",size=20,weight="bold")
+    courier30 = font.Font(family="Courier",size=30,weight="bold")
 
     #Entry
-    e = Entry(root,bg = '#9ce1e2',bd = 6, font = helv36)  # an Entry object
+    e = Entry(root,bg = '#9ce1e2',bd = 6, font = courier20)  # an Entry object
     e.pack()                                                             # set and display
     e.place()
 
     #Label
-    L = Label(root, text="Give Path",fg = '#013e8e',font = helv37)
+    L = Label(root, text="Give Path",fg = '#013e8e',font = courier30)
     L.pack( side = 'top')
     L.place()
 
     #Button
     b = Button(root,text='OKAY',command=lambda arg = e: okay(arg), width = 15, height = 2,fg = '#6a7ad1',
-    activeforeground = '#013e8e',font =helv36 ) # a button object
+    activeforeground = '#013e8e',font = courier20 ) # a button object
     b.pack(side = 'bottom')                                                  # set and display
     b.place()
 
     b1 = Button(root,text='DONE',command=foo1, width = 15, height = 2,fg = '#6a7ad1',
-    activeforeground = '#013e8e',font =helv36 ) # a button object
+    activeforeground = '#013e8e',font = courier20 ) # a button object
     root.mainloop()
