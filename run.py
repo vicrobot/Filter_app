@@ -2,6 +2,7 @@ import os
 import sys
 from tkinter import *
 from tkinter import font
+from PIL import ImageTk, Image
 from functools import partial
 import shutil
 from tkinter import messagebox as mb
@@ -66,6 +67,10 @@ def foo1():
     global flagoff
     if flagoff: sys.exit()
 
+def info():
+    helpstr = 'An Application for \nsorting out image \nand video files of \nspecified directory   '
+    mb.showinfo(title = 'Notice', message = helpstr)
+
 if __name__ == "__main__":
 
     root = Tk()                              # the main object
@@ -73,7 +78,7 @@ if __name__ == "__main__":
 
     root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='filter.png'))
     os.chdir('/')
-
+    #img = ImageTk.PhotoImage(Image.open("images.png"))
 
     #font
     courier20 = font.Font(family="Courier",size=20,weight="bold")
@@ -88,6 +93,10 @@ if __name__ == "__main__":
     L = Label(root, text="Give Path",fg = '#013e8e',font = courier30)
     L.pack( side = 'top')
     L.place()
+
+    #help panel
+    panel = Button(root, text = '?', command  = info,fg = '#6a7ad1',font = courier20 )
+    panel.pack(side = 'right')
 
     #Button
     b = Button(root,text='OKAY',command=lambda arg = e: okay(arg), width = 15, height = 2,fg = '#6a7ad1',
