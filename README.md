@@ -6,4 +6,4 @@ Tested in both system.
 For Android, go to a suitable IDE with tkinter and pyQt5 support.
 
 
-[![](https://img.shields.io/badge/Testing-on-linux(Video)-blue.svg)](https://youtu.be/ut8kVLq9iUw)
+[![](https://img.shields.io/badge/Testing-on-linux-blue.svg)](https://youtu.be/ut8kVLq9iUw)
