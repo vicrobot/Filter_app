@@ -6,4 +6,4 @@ Tested in both system.
 For Android, go to a suitable IDE with tkinter and pyQt5 support.
 
 
-[![](https://img.shields.io/badge/Run_it-blue.svg)](https://github.com/vicrobot/Filter_app/blob/master/run.py)
+[![](https://img.shields.io/badge/Testing-on-linux(Video)-green.svg)](https://youtu.be/ut8kVLq9iUw)
