@@ -2,9 +2,9 @@ import os
 import sys
 from tkinter import *
 from tkinter import font
-from PIL import ImageTk, Image
+#from PIL import ImageTk, Image
 from functools import partial
-import shutil
+#import shutil
 from tkinter import messagebox as mb
 
 
