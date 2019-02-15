@@ -1,4 +1,4 @@
-**Only for Linux system, and Android OS**
+**For Linux system, Windows and Android OS**
 
 Use for cleaning the directory mess and make separate folders for pictures and videos.
 
