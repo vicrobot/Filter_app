@@ -8,15 +8,15 @@ Use for cleaning the directory mess and make separate folders for pictures and v
 
    **Linux**
    
-![](https://github.com/vicrobot/Filter_app/blob/master/Screenshots/Linux.png)
+![](https://github.com/vicrobot/Filter_app/blob/master/Pictures/Linux.png)
 
    **Windows**
    
-![](https://github.com/vicrobot/Filter_app/blob/master/Screenshots/Windows.png)
+![](https://github.com/vicrobot/Filter_app/blob/master/Pictures/Windows.png)
 
    **Android**
    
-![](https://github.com/vicrobot/Filter_app/blob/master/Screenshots/Android.png)
+![](https://github.com/vicrobot/Filter_app/blob/master/Pictures/Android.png)
 
 
 Tested in all three above system. 
