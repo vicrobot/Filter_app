@@ -3,12 +3,23 @@
 Use for cleaning the directory mess and make separate folders for pictures and videos.
 
 
-**ScreenShot**
-
-![](https://github.com/vicrobot/Filter_app/blob/master/Screenshot1.png)
+**ScreenShots**
 
 
-Tested in both system. 
+   **Linux**
+   
+![](https://github.com/vicrobot/Filter_app/blob/master/Screenshots/Linux.png)
+
+   **Windows**
+   
+![](https://github.com/vicrobot/Filter_app/blob/master/Screenshots/Windows.png)
+
+   **Android**
+   
+![](https://github.com/vicrobot/Filter_app/blob/master/Screenshots/Android.png)
+
+
+Tested in all three above system. 
 For Android, go to a suitable IDE with tkinter and pyQt5 support.
 
 I personally found this app suitable in android:- 
