@@ -1,5 +1,9 @@
+#! /usr/bin/env python3
+#that above is python's path where it is installed;
+
 import os
 import sys
+import inspect
 from tkinter import *
 from tkinter import font
 #from PIL import ImageTk, Image
@@ -12,6 +16,7 @@ img = ['.png','.jpg','.svg','.jpeg','.exif','.tiff','.gif','.bmp','.jfif','.ppm'
 vid = ['.mp4','.mkv','.m4a', '.m4v', '.f4v', '.f4a', '.m4b', '.m4r', '.f4b', '.mov','.3gp', '.3gp2', '.3g2', '.3gpp','.3gpp2','.ogg','.oga','.ogv','.ogx','.wmv', '.wma', '.asf','.webm','.flv','.ts']
 var = ""
 flagoff = 0
+
 
 def is_vid(st):
     for i in vid:
@@ -75,8 +80,8 @@ if __name__ == "__main__":
 
     root = Tk()                              # the main object
     root.title('Filter App')                 # the title
-
-    root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='Pictures/filter.png'))
+    v = inspect.getfile(inspect.currentframe()).partition('/run.py')
+    root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file=v[0] + '/Pictures/filter.png'))
     os.chdir('/')
     #img = ImageTk.PhotoImage(Image.open("images.png"))
 
