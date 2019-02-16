@@ -1,4 +1,4 @@
-**Only for Linux system, and Android OS**
+**Only Linux system only**
 
 Use for cleaning the directory mess and make separate folders for pictures and videos.
 
@@ -10,18 +10,10 @@ Use for cleaning the directory mess and make separate folders for pictures and v
    
 ![](https://github.com/vicrobot/Filter_app/blob/master/Pictures/Linux.png)
 
-   **Windows**
+
+   **How to install this program**
    
-![](https://github.com/vicrobot/Filter_app/blob/master/Pictures/Windows.png)
-
-   **Android**
-   
-![](https://github.com/vicrobot/Filter_app/blob/master/Pictures/Android.png)
-
-
-Tested in all three above system. 
-For Android, go to a suitable IDE with tkinter and pyQt5 support.
-
-I personally found this app suitable in android:- 
-
-[![](https://img.shields.io/badge/Pydroid-3-blue.svg)](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl=en_US)
+ $  python install.py
+ 
+ Then you'll see a new executable .desktop file . Just click it. 
+ You can also add it to launcher by clicking 'Add to Launcher' when the program is running.
