@@ -1,4 +1,4 @@
-**Only Linux system only**
+**Linux system only**
 
 Use for cleaning the directory mess and make separate folders for pictures and videos.
 
