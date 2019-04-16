@@ -76,7 +76,7 @@ if __name__ == "__main__":
     root = Tk()                              # the main object
     root.title('Filter App')                 # the title
 
-    root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='filter.png'))
+    root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='Pictures/filter.png'))
     os.chdir('/')
     #img = ImageTk.PhotoImage(Image.open("images.png"))
 
