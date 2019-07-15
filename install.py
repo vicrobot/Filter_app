@@ -8,7 +8,7 @@ def spaceantibug(path1):
     formats string for terminal based execution.
     """
     l = path1.split(' ')
-    if len(l) == 1: return l
+    if len(l) == 1: return path1
     else: return '\ '.join(l)
 
 stringinp = '''
