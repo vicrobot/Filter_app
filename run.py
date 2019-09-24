@@ -1,9 +1,14 @@
 #! /usr/bin/env python3
 #that above is python's path where it is installed;
 
+
+"""
+Features needed :-
+Remove empty directory that you create when no images or no videos or both are not present.
+"""
 import os
 import sys
-import inspect
+import inspect, magic
 from tkinter import *
 from tkinter import font
 #from PIL import ImageTk, Image
@@ -11,21 +16,15 @@ from functools import partial
 #import shutil
 from tkinter import messagebox as mb
 
-
-img = ['.png','.jpg','.svg','.jpeg','.exif','.tiff','.gif','.bmp','.jfif','.ppm','.pgm','.pbm','.pnm','.webp','.heif','.bat','.bpg']
-vid = ['.mp4','.mkv','.m4a', '.m4v', '.f4v', '.f4a', '.m4b', '.m4r', '.f4b', '.mov','.3gp', '.3gp2', '.3g2', '.3gpp','.3gpp2','.ogg','.oga','.ogv','.ogx','.wmv', '.wma', '.asf','.webm','.flv','.ts']
 var = ""
 flagoff = 0
 
-
 def is_vid(st):
-    for i in vid:
-        if i in st: return True
+    if magic.from_file(var + '/' +  st, mime = 1).startswith('video'): return True
     else: return False
 
 def is_img(st):
-    for i in img:
-        if i in st: return True
+    if magic.from_file(var + '/'  +  st, mime = 1).startswith('image'): return True
     else: return False
 
 def cutnpst(v1, v2, v3):
@@ -54,12 +53,15 @@ def okay(e):
     path2 = mkname(var+"/images")
     os.mkdir(path1)
     os.mkdir(path2)
+    cnp = []
     for i in os.listdir(var):
         if os.path.isfile(var +'/'+ str(i)):
             if is_vid(i):
-                cutnpst(i,var,path1)
+                cnp.append((i,var,path1))
             if is_img(i):
-                cutnpst(i,var,path2)
+                cnp.append((i,var,path2))
+    for i in cnp:
+        cutnpst(*i)
     flagoff = 1
 
 def foo():
@@ -81,7 +83,7 @@ if __name__ == "__main__":
     root = Tk()                              # the main object
     root.title('Filter App')                 # the title
     v = inspect.getfile(inspect.currentframe()).partition('/run.py')
-    root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file=v[0] + '/Pictures/filter.png'))
+    root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='Pictures/filter.png'))
     os.chdir('/')
     #img = ImageTk.PhotoImage(Image.open("images.png"))
 
