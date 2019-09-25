@@ -62,6 +62,10 @@ def okay(e):
                 cnp.append((i,var,path2))
     for i in cnp:
         cutnpst(*i)
+    v1 = os.listdir(path1)
+    v2 = os.listdir(path2)
+    if not v1: os.rmdir(path1) #not remove since it removes files only.
+    if not v2: os.rmdir(path2)
     flagoff = 1
 
 def foo():
