@@ -15,5 +15,5 @@ Use for cleaning the directory mess and make separate folders for pictures and v
    
  $  python install.py
  
- Then you'll see a new executable .desktop file . Just click it. 
+ Then you'll see a new executable .desktop file . Just double click it to run the program. 
  You can also add it to launcher by clicking 'Lock to Launcher' when the program is running.
